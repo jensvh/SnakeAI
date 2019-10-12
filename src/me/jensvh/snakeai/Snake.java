@@ -367,7 +367,7 @@ public class Snake {
 	 * Calculate fitness based on the length of the tail and the steps taken.
 	 */
 	public void calculateFitness() {
-		fitness = stepsTaken * stepsTaken * stepsTaken; // TODO: remove -3
+		fitness = (int) Math.floor(stepsTaken * stepsTaken * Math.pow(2, Math.floor(tailLength)));
 	}
 	
 	
